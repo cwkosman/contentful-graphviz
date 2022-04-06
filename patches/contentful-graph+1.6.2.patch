@@ -1,0 +1,17 @@
+diff --git a/node_modules/contentful-graph/src/get-relations.js b/node_modules/contentful-graph/src/get-relations.js
+index 387df2f..8219fd2 100644
+--- a/node_modules/contentful-graph/src/get-relations.js
++++ b/node_modules/contentful-graph/src/get-relations.js
+@@ -40,7 +40,11 @@ function getRelations(contentType, allTypes) {
+   };
+   const checkRichTextValidationAndAddRelations = (fieldId, richTextValidations) => {
+     const nodeTypesEditorConfig = richTextValidations.filter((validationObj) => typeof validationObj.enabledNodeTypes !== 'undefined')[0];
+-    const nodesRestrictionConfig = richTextValidations.filter((validationObj) => typeof validationObj.nodes !== 'undefined')[0];
++    let nodesRestrictionConfig = richTextValidations.filter((validationObj) => typeof validationObj.nodes !== 'undefined')[0];
++
++    if (typeof nodesRestrictionConfig === 'undefined') {
++      nodesRestrictionConfig = { nodes: {} }
++    }
+     /**
+      *
+      * @param {string} entryLinkType

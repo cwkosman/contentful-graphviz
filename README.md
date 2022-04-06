@@ -1,7 +1,7 @@
 To use this repository:
 
 1. Install graphviz on your system. With homebrew: `brew install graphviz`
-2. Create and populate your own .env file with the Contentful Space ID, a Cotentful Management Token, and the name of a Contentful environment (usually master).
+2. Create and populate your own .env file with the Contentful Space ID, a Contentful Management Token, and the name of a Contentful environment (usually `master`).
 3. `npm install` the dependencies of this repo
 4. From the command line, use:
 

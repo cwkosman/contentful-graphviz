@@ -1,6 +1,10 @@
 {
+  "scripts": {
+    "postinstall": "patch-package"
+  },
   "dependencies": {
     "contentful-graph": "^1.6.2",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "patch-package": "^6.4.7"
   }
 }
